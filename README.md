@@ -1,5 +1,5 @@
 # Fitted-Distributional-Evaluation
-This repository contains the Python codes for the paper &lt;A Principled Path to Fitted Distributional Evaluation> that is accepted by NeurlIPS 2025.
+This repository contains the Python codes for the paper &lt;A Principled Path to Fitted Distributional Evaluation> that is accepted by NeurlIPS 2025. Refer to the following link for the draft. https://arxiv.org/abs/2506.20048
 - LQR (Linear Quadratic Regulator): We compare FLE (baseline) and our FDE (fitted distributional evaluation) methods (KL, Energy, Laplace, RBF, PDFL2).
 - Atari games: We compare FLE, QRDQN, IQN, TVD (baseline) and our FDE methods (KL, Energy, PDFL2, RBF, Hyvarinen). We compare these in seven different game settings (Atlantis, Breakout, Enduro, Kungfumaster, Pong, Qbert, Spaceinvader) under four different settings (weak / strong coverage, deterministic / random reward).
 
