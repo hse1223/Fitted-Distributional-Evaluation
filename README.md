@@ -12,7 +12,7 @@ Following image represents the progress of estimation throughout iterations. Usi
 ## LQR
 - Run cmd.sh to obtain the same plots in the paper.
 ## Atari
-- **cmdA_optimal.sh** applies deep-Q learning to train an optimal policy. However, we recommend not to run this, since the trained policies are already saved in the directory optimal/.
+- **cmdA_optimal.sh** applies deep-Q learning to train an optimal policy. However, we recommend not to run this, since the trained policies are already saved in the directory optimal/. Retraining the policies can change the simulation results.
 - **cmdB_GMM.sh** applies GMM (Gaussian mixture model) based methods. These include baseline methods (FLE, TVD) and our FDE methods (KL, PDFL2, Energy, RBF).
 - **cmdB_Particle.sh** applies particle (dirac delta) based methods. These include the quantile based methods (QRDQN, IQN).
 - **cmdD_table.sh** obtains the inaccuracy values and their ranks for each setting.
