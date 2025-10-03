@@ -19,15 +19,25 @@ Following image represents the progress of estimation throughout iterations. Usi
 - **cmdE_boxplot.sh** dispalys the inaccuracy comparison via boxplots.
 ## Python version
 - We are using Python==3.9.13 with the following modules.
+
 gym==0.17.3
+
 numpy==1.21.5
+
 stable_baselines3==1.6.2
+
 torch==1.13.1+cu116
+
 psutil==5.9.0
+
 msgpack==1.0.3
+
 matplotlib==3.6.2
+
 tensorboard==2.11.0
+
 scipy==1.9.3
+
 pandas==1.4.4
 
 
