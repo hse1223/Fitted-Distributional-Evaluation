@@ -42,19 +42,7 @@ class GMM_OPE(nn.Module):
         elif method=="RBF":
             self.K0=self.K0_rbf
 
-
         conv_net = nature_cnn(env.observation_space)
-
-        # ## First trial (shallow)
-        # self.fc = nn.Sequential(
-        #     nn.Linear(512, 256),
-        #     nn.ReLU(),
-        #     nn.Linear(256, 128),
-        #     nn.ReLU(),
-        #     nn.Linear(128, self.num_actions * self.num_mixture * 3)   # output: mb_size x action_num x num_mix x 3 (log_weight, mu, log_var)
-        # )
-
-        ## Second trial (deepened)
         self.fc = nn.Sequential(
             nn.Linear(512, 450),
             nn.ReLU(),
@@ -74,29 +62,6 @@ class GMM_OPE(nn.Module):
             nn.ReLU(),
             nn.Linear(128, self.num_actions * self.num_mixture * 3)   # output: mb_size x action_num x num_mix x 3 (log_weight, mu, log_var)
         )
-
-        # ## Third trial (include quantile-approach)
-        # self.huberloss=torch.nn.HuberLoss(reduction='none', delta=QRDQN_kappa)
-        # self.fc = nn.Sequential(
-        #     nn.Linear(512, 450),
-        #     nn.ReLU(),
-        #     nn.Linear(450, 400),
-        #     nn.ReLU(),
-        #     nn.Linear(400, 350),
-        #     nn.ReLU(),
-        #     nn.Linear(350, 300),
-        #     nn.ReLU(),
-        #     nn.Linear(300, 250),
-        #     nn.ReLU(),
-        #     nn.Linear(250, 200),
-        #     nn.ReLU(),
-        #     nn.Linear(200, 150),
-        #     nn.ReLU(),
-        #     nn.Linear(150, 128),
-        #     nn.ReLU(),
-        #     nn.Linear(128, self.num_actions * self.num_mixture)   
-        # )
-
         self.net = nn.Sequential(conv_net, self.fc)
 
     def forward(self, x):
@@ -993,6 +958,7 @@ class Particle_OPE(nn.Module):
 
         return loss
         
+
 
 
 
